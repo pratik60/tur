@@ -5,6 +5,8 @@ capybara-*.html
 .rspec
 /.bundle
 /vendor/bundle
+/config/initializers/devise.rb
+/config/environments/development.rb
 /log/*
 /tmp/*
 /db/*.sqlite3
