@@ -13,6 +13,19 @@
 
 ActiveRecord::Schema.define(version: 20130814092851) do
 
+  create_table "identities", force: true do |t|
+    t.string   "uid"
+    t.string   "provider"
+    t.string   "token"
+    t.string   "secret"
+    t.datetime "expires_at"
+    t.string   "email"
+    t.string   "image"
+    t.string   "nickname"
+    t.string   "first_name"
+    t.string   "last_name"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -30,8 +43,6 @@ ActiveRecord::Schema.define(version: 20130814092851) do
     t.string   "unconfirmed_email"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "provider"
-    t.string   "uid"
     t.string   "first_name"
     t.string   "last_name"
     t.integer  "roles_mask"
