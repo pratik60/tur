@@ -1,6 +1,6 @@
 class Identity < ActiveRecord::Base
 
-  belongs_to :user, :foreign_key => uid
+  belongs_to :user, :foreign_key => "uid"
 
   def self.from_omniauth(auth)
     identity = where(auth.slice(:provider, :uid)).first_or_create do |identity|
